@@ -1,32 +1,24 @@
 #include <stdio.h>
-#include "dataStructures/filaPub.h"
 #include "systemStructures/structs.h"
 
-int compareEvent(void *inf1, void *inf2){
-	EVENT event1 = *((EVENT*) inf1);
-	EVENT event2 = *((EVENT*) inf2);
-	return event1.scheduledTime > event2.scheduledTime;
-}
-
-void printEvent(void *inf1){
-	EVENT event1 = *((EVENT*) inf1);
-	printf("%d ", event1.scheduledTime);
+void readInput(SCHEDULER *scheduler){
+	int numberOfJobs;
+	int i;
+	JOB *job = (JOB*) malloc(sizeof(JOB));
+	
+	//Assigns the general system variables.
+	scanf("%d %d %d %d %d", &scheduler->cmSize, &scheduler->quadSize, &scheduler->rrTimeSlice, &scheduler->ioBurst, &numberOfJobs);
+	
+	//Reads the jobs inside the input file.
+	for(i=0; i<numberOfJobs; i++){
+		scanf("%d %d %d %d %d ", &job->id, &job->arrivalTime, &job->cpuBurst, &job->cmSize, &job->ioRequests);
+		receiveJob(scheduler, job);
+	}
 }
 
 int main(void){
-	pF queue; 
-	cria(&queue, sizeof(EVENT));
-	
-	EVENT event;
-	
-	while(1){
-		scanf("%d", &event.scheduledTime);
-		if(event.scheduledTime==0) {
-			break;
-		}
-		inserePrioridade(queue, &event, compareEvent);
-		imprimeFila(queue, printEvent);
-	}
-	
+	SCHEDULER scheduler;
+	initializeScheduler(&scheduler);
+	readInput(&scheduler);
 	return 0;
 }

@@ -2,7 +2,7 @@ CC = gcc
 CFLAGS = -c -Wall
 SRCPATH = src
 EXEC = bin/BASYS
-OBJECTS = fila.o main.o
+OBJECTS = fila.o scheduler.o main.o
 
 all: link
 
@@ -12,8 +12,11 @@ link: $(OBJECTS)
 fila.o:
 	$(CC) $(CFLAGS) $(SRCPATH)/dataStructures/fila.c
 
+scheduler.o:
+	$(CC) $(CFLAGS) $(SRCPATH)/systemStructures/scheduler.c
+	
 main.o:
 	$(CC) $(CFLAGS) $(SRCPATH)/main.c
 	
 clean:
-	rm -rf *.o
+	erase *.o
