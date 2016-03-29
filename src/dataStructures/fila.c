@@ -1,6 +1,7 @@
+#include <stdio.h>
 #include "filaPriv.h"
 
-int cria(ppFila fpp, int tamInfo){
+int criaFila(ppFila fpp, int tamInfo){
 	if((*fpp = (pFila) malloc(sizeof(Fila)))==NULL) return FRACASSO;
 	(*fpp)->tamInfo = tamInfo;
 	(*fpp)->cauda = NULL;
@@ -16,28 +17,28 @@ void destroiNoFila(pNo *aux){
 	}
 }
 
-void destroi(ppFila fpp){
+void destroiFila(ppFila fpp){
 	destroiNoFila(&(*fpp)->frente);
 	free(*fpp);
 }
 
-int buscaNaFrente(pFila fp, void *destino){
-	if(!testaVazia(fp)){
+int buscaNaFrenteFila(pFila fp, void *destino){
+	if(!testaVaziaFila(fp)){
 		memcpy(destino, fp->frente->dados, fp->tamInfo);
 		return SUCESSO;
 	}
 	return FRACASSO;
 }
 
-int buscaNaCauda(pFila fp, void *destino){
-	if(!testaVazia(fp)){
+int buscaNaCaudaFila(pFila fp, void *destino){
+	if(!testaVaziaFila(fp)){
 		memcpy(destino, fp->cauda->dados, fp->tamInfo);
 		return SUCESSO;
 	}
 	return FRACASSO;
 }
 
-int inserePrioridade(pFila fp, void *novo, int (*callback)(void *dados1, void *dados2)){
+int inserePrioridadeFila(pFila fp, void *novo, int (*callback)(void *dados1, void *dados2)){
 	pNo *aux, temp1, iterador, registro;
 	if((registro = (pNo) malloc(sizeof(No)))==NULL) return FRACASSO;
 	if((registro->dados = (void*) malloc(fp->tamInfo))==NULL) return FRACASSO;
@@ -89,7 +90,7 @@ int inserePrioridade(pFila fp, void *novo, int (*callback)(void *dados1, void *d
 }
 
 int insere(pFila fp, void *novo){
-	pNo *aux, temp1, temp2;
+	pNo *aux, temp1;
 	if(fp->frente==NULL){ //Fila vazia
 		if((fp->frente = (pNo) malloc(sizeof(No)))==NULL) return FRACASSO;
 		fp->cauda = fp->frente;
@@ -112,9 +113,9 @@ int insere(pFila fp, void *novo){
 	return SUCESSO;
 }
 
-int retira(pFila fp, void *novo){
+int retiraFila(pFila fp, void *novo){
 	pNo aux;
-	if(!testaVazia(fp)){
+	if(!testaVaziaFila(fp)){
 		aux = fp->frente;
 		memcpy(novo, aux->dados, fp->tamInfo);
 		fp->frente = fp->frente->prox;
@@ -126,19 +127,19 @@ int retira(pFila fp, void *novo){
 	return FRACASSO;
 }
 
-int testaVazia(pFila fp){
+int testaVaziaFila(pFila fp){
 	if(fp->frente==NULL) return SUCESSO;
 	return FRACASSO;
 }
 
-int reinicia(pFila fp){
+int reiniciaFila(pFila fp){
 	destroiNoFila(&fp->frente);
 	fp->frente = NULL;
 	fp->cauda = NULL;
 	return SUCESSO;
 }
 
-int numElemDeAltaPrior(pFila fp, int (*funcAux)(void *inf1)){
+int numElemDeAltaPriorFila(pFila fp, int (*funcAux)(void *inf1)){
 	pNo aux;
 	int cont=0;
 	aux = fp->frente;

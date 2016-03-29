@@ -6,15 +6,15 @@
 
 typedef struct FDDE *pF, **ppF;
 
-int cria(ppF fpp, int tamInfo);
-void destroi(ppF fpp);
-int buscaNaFrente(pF fp, void *destino);
-int buscaNaCauda(pF fp, void *destino);
-int insere(pF fp, void *novo);
-int inserePrioridade(pF fp, void *novo, int (*callback)(void *dados1, void *dados2));
-int retira(pF fp, void *novo);
-int testaVazia(pF fp);
-int reinicia(pF fp);
-int numElemDeAltaPrior(pF fp, int (*funcAux)(void *inf1));
+int criaFila(ppF fpp, int tamInfo);
+void destroiFila(ppF fpp);
+int buscaNaFrenteFila(pF fp, void *destino);
+int buscaNaCaudaFila(pF fp, void *destino);
+int insereFila(pF fp, void *novo);
+int inserePrioridadeFila(pF fp, void *novo, int (*callback)(void *dados1, void *dados2));
+int retiraFila(pF fp, void *novo);
+int testaVaziaFila(pF fp);
+int reiniciaFila(pF fp);
+int numElemDeAltaPriorFila(pF fp, int (*funcAux)(void *inf1));
 int tamanhoDaFila(pF fp);
 int imprimeFila(pF fp, void (*imprimeNo)(void *inf1));
