@@ -2,18 +2,18 @@ CC = gcc
 CFLAGS = -c -Wall
 SRCPATH = src
 EXEC = bin/BASYS
-OBJECTS = core.o reader.o
+OBJECTS = fila.o main.o
 
 all: link
 
 link: $(OBJECTS)
 	$(CC) $(OBJECTS) -o $(EXEC)
 
-simulador.o: entrada.o
-	$(CC) $(CFLAGS) $(SRCPATH)/core.c
+fila.o:
+	$(CC) $(CFLAGS) $(SRCPATH)/dataStructures/fila.c
 
-entrada.o:
-	$(CC) $(CFLAGS) $(SRCPATH)/reader.c
-
+main.o:
+	$(CC) $(CFLAGS) $(SRCPATH)/main.c
+	
 clean:
 	rm -rf *.o
