@@ -38,7 +38,7 @@ int buscaNaCauda(pFila fp, void *destino){
 }
 
 int inserePrioridade(pFila fp, void *novo, int (*callback)(void *dados1, void *dados2)){
-	pNo *aux, temp1, temp2, iterador, registro;
+	pNo *aux, temp1, iterador, registro;
 	if((registro = (pNo) malloc(sizeof(No)))==NULL) return FRACASSO;
 	if((registro->dados = (void*) malloc(fp->tamInfo))==NULL) return FRACASSO;
 	iterador = fp->frente;
@@ -158,4 +158,15 @@ int tamanhoDaFila(pFila fp){
 		aux = aux->prox;
 	}
 	return tam;
+}
+
+int imprimeFila(pFila fp, void (*imprimeNo)(void *inf1)){
+	pNo aux;
+	aux = fp->frente;
+	while(aux!=NULL){
+		imprimeNo(aux->dados);
+		aux = aux->prox;
+	}
+	printf("\n");
+	return SUCESSO;
 }
