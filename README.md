@@ -2,25 +2,25 @@
 Primeiro exercício Prático de Programação para a disciplina ACH2096.
 
 ##TODO
-*###Filas:
+*Filas:
 	**Memória
 	**Processador
 	**Disco
 	**Struct
 		***Job
 		
-*###Parâmetros
+*Parâmetros
 	**Tempo entre jobs
 	**Memória necessária
 	**Tempo de processamento
 	**Tempo de IO
 	**Quantidade de IOs
 
-*###Job
+*Job
 	**Id
 	**IOs restantes
 
-*###Evento
+*Evento
 	--Id
 	--Tempo
-	--Job	
+	-*Job	
