@@ -1,26 +1,41 @@
 # EP1-BASYS
 Primeiro exercício Prático de Programação para a disciplina ACH2096.
 
-##TODO
-* Filas:
+## ORGANIZAÇÃO
+O projeto está organizado em:
+- **src**: arquivos do código fonte.
+- **bin**: arquivos compilados.
+- **doc**: documentação do software.
+
+## COMPILING
+```
+$ make
+```
+
+## RUNNING
+```
+$ ./bin/BASYS
+```
+## TODO
+* #### Filas:
 	* Memória
 	* Processador
 	* Disco
 	* Struct
-		*Job
+		* Job
 		
-* Parâmetros
+* #### Parâmetros
 	* Tempo entre jobs
 	* Memória necessária
 	* Tempo de processamento
 	* Tempo de IO
 	* Quantidade de IOs
 
-* Job
+* #### Job
 	* Id
 	* IOs restantes
 
-* Evento
+* #### Evento
 	- Id
 	- Tempo
 	- *Job	
