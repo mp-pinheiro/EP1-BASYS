@@ -13,9 +13,16 @@ $ make
 ```
 
 ## RUNNING
+### Windows
+```
+$ run.bat
+```
+
+### Linux
 ```
 $ ./bin/BASYS
 ```
+
 ## TODO
 * #### Filas:
 	* Memória
