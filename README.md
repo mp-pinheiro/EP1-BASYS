@@ -13,15 +13,15 @@ $ make
 ```
 
 ## RUNNING
-### Windows
-```
-$ run.bat
-```
+* ### Windows
+	```
+	$ run.bat
+	```
 
-### Linux
-```
-$ ./bin/BASYS
-```
+* ### Linux
+	```
+	$ ./bin/BASYS
+	```
 
 ## TODO
 * #### Filas:
