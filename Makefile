@@ -20,3 +20,4 @@ main.o:
 	
 clean:
 	erase *.o
+	erase bin\BASYS.exe

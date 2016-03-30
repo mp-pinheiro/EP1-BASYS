@@ -1,1 +1,1 @@
-start bin/BASYS.exe
+"bin/BASYS" < input/input2.txt > output.txt
