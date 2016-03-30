@@ -31,9 +31,17 @@ typedef struct{
 	int totalDt;
 	int usingCpu;
 	int usingDisk;
+	char eventName[9][16];
 }SCHEDULER;
 
 int initializeScheduler(SCHEDULER *scheduler);
+void printEventQueue(SCHEDULER *scheduler);
 void receiveJob(SCHEDULER *scheduler, JOB *job);
-void eventArrival(SCHEDULER *scheduler, EVENT *event);
-void eventMemoryRequest(SCHEDULER *scheduler, EVENT *event);
+void eventArrival(SCHEDULER *scheduler, JOB *job);
+void eventMemoryRequest(SCHEDULER *scheduler, JOB *job);
+void eventCpuRequest(SCHEDULER *scheduler, JOB *job);
+void eventCpuRelease(SCHEDULER *scheduler, JOB *job);
+void eventIoRequest(SCHEDULER *scheduler, JOB *job);
+void eventIoRelease(SCHEDULER *scheduler, JOB *job);
+void eventJobCompletion(SCHEDULER *scheduler, JOB *job);
+void eventRrInterruption(SCHEDULER *scheduler, JOB *job);
