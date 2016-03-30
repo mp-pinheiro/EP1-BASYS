@@ -24,25 +24,35 @@ $ make
 	```
 
 ## TODO
-* #### Filas:
-	* Memória
-	* Processador
-	* Disco
-	* Struct
-		* Job
+[X] **Filas:**
+* Memória
+* Processador
+* Disco
+* Struct
+	* Job
 		
-* #### Parâmetros
-	* Tempo entre jobs
-	* Memória necessária
-	* Tempo de processamento
-	* Tempo de IO
-	* Quantidade de IOs
+[X] **Parâmetros**
+* Tempo entre jobs
+* Memória necessária
+* Tempo de processamento
+* Tempo de IO
+* Quantidade de IOs
 
-* #### Job
-	* Id
-	* IOs restantes
+[X] **Job**
+* Id
+* IOs restantes
 
-* #### Evento
-	- Id
-	- Tempo
-	- *Job	
+[X] **Evento**
+* Id
+* Tempo
+* *Job	
+
+[ ] **System Loop**
+* ~~Evento 1: Chegada do Job.~~
+* ~~Evento 2: Requisição de Memória.~~
+* ~~Evento 3: Requisição do CPU.~~
+* Evento 4: Liberação do CPU para IO.
+* Evento 5: Requisição de IO.
+* Evento 6: Conclusão do IO.
+* Evento 7: Conclusão do Job.
+* Evento 8: Liberação do CPU para swap Round-Robin.
