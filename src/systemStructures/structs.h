@@ -31,7 +31,6 @@ typedef struct{
 	int totalDt;
 	int usingCpu;
 	int usingDisk;
-	char eventName[9][16];
 }SCHEDULER;
 
 int initializeScheduler(SCHEDULER *scheduler);
