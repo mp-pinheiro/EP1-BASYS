@@ -6,8 +6,9 @@ typedef struct Event EVENT;
 struct Job{
 	int id;
 	int arrivalTime;
+	int remainingCpu;
 	int cpuBurst;
-	int cmSize;
+	int memorySize;
 	int ioRequests;
 	EVENT *nextEvent;
 };
@@ -23,12 +24,16 @@ typedef struct{
 	pF cmQueue;
 	pF diskQueue;
 	pF eventQueue;
-	int cmSize;
+	int memorySize;
 	int quadSize;
 	int rrTimeSlice;
 	int ioBurst;
 	int totalDt;
+	int usingCpu;
+	int usingDisk;
 }SCHEDULER;
 
 int initializeScheduler(SCHEDULER *scheduler);
 void receiveJob(SCHEDULER *scheduler, JOB *job);
+void eventArrival(SCHEDULER *scheduler, EVENT *event);
+void eventMemoryRequest(SCHEDULER *scheduler, EVENT *event);
