@@ -1,1 +1,1 @@
-"bin/BASYS" < input/input2.txt > output.txt
+"bin/BASYS" < input/input3.txt > output.txt
