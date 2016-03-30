@@ -39,7 +39,7 @@ void printEvent(void *inf1){
 			printf("%d\t\t\tJob Completion\t\t%d\n", event->job->id, event->scheduledTime);
 			break;
 		case 8:
-			printf("%d\t\t\tR-R Interruption\t\t%d\n", event->job->id, event->scheduledTime);
+			printf("%d\t\t\tR-R Interruption\t%d\n", event->job->id, event->scheduledTime);
 			break;
 	}
 }
@@ -136,6 +136,7 @@ void eventCpuRequest(SCHEDULER *scheduler, JOB *job){
 				//Schedules the Event 7: job completion.
 				scheduleEvent(scheduler, job, 7, scheduler->totalDt + job->remainingCpu); //Updates the event time to simulate process running.
 			}
+			job->remainingCpu = job->cpuBurst;
 		}else{ //Round-Robin.
 			//Updates the job time to simulate process running.
 			job->remainingCpu -= scheduler->rrTimeSlice;
