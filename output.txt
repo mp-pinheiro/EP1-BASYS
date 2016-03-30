@@ -1,327 +1,83 @@
 Memory Size		Quad Size		Round-Robin Time Slice		Disk Write Rate		Number of Jobs
-100				30				20							3					4
+100				10				20							3					2
 
 Job ID		Next Event			Scheduled Time
-2			Job Arrival			1
-1			Job Arrival			1
-4			Job Arrival			3
-3			Job Arrival			9
+2			Job Arrival			2
+1			Job Arrival			3
 
 Job ID		Next Event			Scheduled Time
-2			Memory Request		1
-1			Job Arrival			1
-4			Job Arrival			3
-3			Job Arrival			9
+2			Memory Request		2
+1			Job Arrival			3
 
 Job ID		Next Event			Scheduled Time
-2			CPU Request			1
-1			Job Arrival			1
-4			Job Arrival			3
-3			Job Arrival			9
+2			CPU Request			2
+1			Job Arrival			3
 
 Job ID		Next Event			Scheduled Time
-1			Job Arrival			1
-4			Job Arrival			3
-3			Job Arrival			9
-2			CPU Release			16
+1			Job Arrival			3
+2			CPU Release			12
 
 Job ID		Next Event			Scheduled Time
-1			Memory Request		1
-4			Job Arrival			3
-3			Job Arrival			9
-2			CPU Release			16
+1			Memory Request		3
+2			CPU Release			12
 
 Job ID		Next Event			Scheduled Time
-1			CPU Request			1
-4			Job Arrival			3
-3			Job Arrival			9
-2			CPU Release			16
+2			CPU Release			12
 
 Job ID		Next Event			Scheduled Time
-4			Job Arrival			3
-3			Job Arrival			9
-2			CPU Release			16
+2			IO Request			12
 
 Job ID		Next Event			Scheduled Time
-4			Memory Request		3
-3			Job Arrival			9
-2			CPU Release			16
+2			IO Release			15
 
 Job ID		Next Event			Scheduled Time
-4			CPU Request			3
-3			Job Arrival			9
-2			CPU Release			16
+2			CPU Request			15
 
 Job ID		Next Event			Scheduled Time
-3			Job Arrival			9
-2			CPU Release			16
+2			CPU Release			25
 
 Job ID		Next Event			Scheduled Time
-3			Memory Request		9
-2			CPU Release			16
+2			IO Request			25
 
 Job ID		Next Event			Scheduled Time
-3			CPU Request			9
-2			CPU Release			16
+2			IO Release			28
 
 Job ID		Next Event			Scheduled Time
-2			CPU Release			16
+2			CPU Request			28
 
 Job ID		Next Event			Scheduled Time
-2			IO Request			16
-1			CPU Request			16
+2			Job Completion		38
 
 Job ID		Next Event			Scheduled Time
-1			CPU Request			16
-2			IO Release			19
+1			Memory Request		38
 
 Job ID		Next Event			Scheduled Time
-2			IO Release			19
-1			CPU Release			27
+1			CPU Request			38
 
 Job ID		Next Event			Scheduled Time
-2			CPU Request			19
-1			CPU Release			27
+1			R-R Interruption	58
 
 Job ID		Next Event			Scheduled Time
-1			CPU Release			27
+1			CPU Request			58
 
 Job ID		Next Event			Scheduled Time
-1			IO Request			27
-4			CPU Request			27
+1			CPU Release			63
 
 Job ID		Next Event			Scheduled Time
-4			CPU Request			27
-1			IO Release			30
+1			IO Request			63
 
 Job ID		Next Event			Scheduled Time
-1			IO Release			30
-4			CPU Release			39
+1			IO Release			66
 
 Job ID		Next Event			Scheduled Time
-1			CPU Request			30
-4			CPU Release			39
+1			CPU Request			66
 
 Job ID		Next Event			Scheduled Time
-4			CPU Release			39
-
-Job ID		Next Event			Scheduled Time
-4			IO Request			39
-3			CPU Request			39
-
-Job ID		Next Event			Scheduled Time
-3			CPU Request			39
-4			IO Release			42
-
-Job ID		Next Event			Scheduled Time
-4			IO Release			42
-3			CPU Release			57
-
-Job ID		Next Event			Scheduled Time
-4			CPU Request			42
-3			CPU Release			57
-
-Job ID		Next Event			Scheduled Time
-3			CPU Release			57
-
-Job ID		Next Event			Scheduled Time
-3			IO Request			57
-2			CPU Request			57
-
-Job ID		Next Event			Scheduled Time
-2			CPU Request			57
-3			IO Release			60
-
-Job ID		Next Event			Scheduled Time
-3			IO Release			60
-2			CPU Release			72
-
-Job ID		Next Event			Scheduled Time
-3			CPU Request			60
-2			CPU Release			72
-
-Job ID		Next Event			Scheduled Time
-2			CPU Release			72
-
-Job ID		Next Event			Scheduled Time
-2			IO Request			72
-1			CPU Request			72
-
-Job ID		Next Event			Scheduled Time
-1			CPU Request			72
-2			IO Release			75
-
-Job ID		Next Event			Scheduled Time
-2			IO Release			75
-1			CPU Release			83
-
-Job ID		Next Event			Scheduled Time
-2			CPU Request			75
-1			CPU Release			83
-
-Job ID		Next Event			Scheduled Time
-1			CPU Release			83
-
-Job ID		Next Event			Scheduled Time
-1			IO Request			83
-4			CPU Request			83
-
-Job ID		Next Event			Scheduled Time
-4			CPU Request			83
-1			IO Release			86
-
-Job ID		Next Event			Scheduled Time
-1			IO Release			86
-4			CPU Release			95
+1			R-R Interruption	86
 
 Job ID		Next Event			Scheduled Time
 1			CPU Request			86
-4			CPU Release			95
 
 Job ID		Next Event			Scheduled Time
-4			CPU Release			95
-
-Job ID		Next Event			Scheduled Time
-4			IO Request			95
-3			CPU Request			95
-
-Job ID		Next Event			Scheduled Time
-3			CPU Request			95
-4			IO Release			98
-
-Job ID		Next Event			Scheduled Time
-4			IO Release			98
-3			CPU Release			113
-
-Job ID		Next Event			Scheduled Time
-4			CPU Request			98
-3			CPU Release			113
-
-Job ID		Next Event			Scheduled Time
-3			CPU Release			113
-
-Job ID		Next Event			Scheduled Time
-3			IO Request			113
-2			CPU Request			113
-
-Job ID		Next Event			Scheduled Time
-2			CPU Request			113
-3			IO Release			116
-
-Job ID		Next Event			Scheduled Time
-3			IO Release			116
-2			CPU Release			128
-
-Job ID		Next Event			Scheduled Time
-3			CPU Request			116
-2			CPU Release			128
-
-Job ID		Next Event			Scheduled Time
-2			CPU Release			128
-
-Job ID		Next Event			Scheduled Time
-2			IO Request			128
-1			CPU Request			128
-
-Job ID		Next Event			Scheduled Time
-1			CPU Request			128
-2			IO Release			131
-
-Job ID		Next Event			Scheduled Time
-2			IO Release			131
-1			CPU Release			139
-
-Job ID		Next Event			Scheduled Time
-2			CPU Request			131
-1			CPU Release			139
-
-Job ID		Next Event			Scheduled Time
-1			CPU Release			139
-
-Job ID		Next Event			Scheduled Time
-1			IO Request			139
-4			CPU Request			139
-
-Job ID		Next Event			Scheduled Time
-4			CPU Request			139
-1			IO Release			142
-
-Job ID		Next Event			Scheduled Time
-1			IO Release			142
-4			CPU Release			151
-
-Job ID		Next Event			Scheduled Time
-1			CPU Request			142
-4			CPU Release			151
-
-Job ID		Next Event			Scheduled Time
-4			CPU Release			151
-
-Job ID		Next Event			Scheduled Time
-4			IO Request			151
-3			CPU Request			151
-
-Job ID		Next Event			Scheduled Time
-3			CPU Request			151
-4			IO Release			154
-
-Job ID		Next Event			Scheduled Time
-4			IO Release			154
-3			Job Completion		169
-
-Job ID		Next Event			Scheduled Time
-4			CPU Request			154
-3			Job Completion		169
-
-Job ID		Next Event			Scheduled Time
-3			Job Completion		169
-
-Job ID		Next Event			Scheduled Time
-2			CPU Request			169
-
-Job ID		Next Event			Scheduled Time
-2			CPU Release			184
-
-Job ID		Next Event			Scheduled Time
-2			IO Request			184
-1			CPU Request			184
-
-Job ID		Next Event			Scheduled Time
-1			CPU Request			184
-2			IO Release			187
-
-Job ID		Next Event			Scheduled Time
-2			IO Release			187
-1			Job Completion		195
-
-Job ID		Next Event			Scheduled Time
-2			CPU Request			187
-1			Job Completion		195
-
-Job ID		Next Event			Scheduled Time
-1			Job Completion		195
-
-Job ID		Next Event			Scheduled Time
-4			CPU Request			195
-
-Job ID		Next Event			Scheduled Time
-4			Job Completion		207
-
-Job ID		Next Event			Scheduled Time
-2			CPU Request			207
-
-Job ID		Next Event			Scheduled Time
-2			CPU Release			222
-
-Job ID		Next Event			Scheduled Time
-2			IO Request			222
-
-Job ID		Next Event			Scheduled Time
-2			IO Release			225
-
-Job ID		Next Event			Scheduled Time
-2			CPU Request			225
-
-Job ID		Next Event			Scheduled Time
-2			Job Completion		240
+1			Job Completion		91
 
