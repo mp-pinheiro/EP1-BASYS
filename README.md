@@ -9,6 +9,7 @@ O projeto está organizado em:
 
 ## COMPILING
 ```
+$ make clean
 $ make
 ```
 
@@ -57,6 +58,6 @@ $ make
 	* Evento 7: Conclusão do Job.
 	* Evento 8: Liberação do CPU para swap Round-Robin.
 	
-- [ ] **Testar e Comparar Testes**
+- [x] **Testar e Comparar Testes**
 	* FCFS
 	* Round-Robin
