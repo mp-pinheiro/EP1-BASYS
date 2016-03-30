@@ -18,6 +18,15 @@ scheduler.o:
 main.o:
 	$(CC) $(CFLAGS) $(SRCPATH)/main.c
 	
-clean:
-	erase *.o
-	erase bin\BASYS.exe
+ifeq ($(OS),Windows_NT)
+    #Windows
+    clean:
+		erase *.o
+		erase bin\BASYS.exe
+		
+else
+    #Linux
+    clean:
+		rm -f *.o
+		rm -f bin/BASYS
+endif
