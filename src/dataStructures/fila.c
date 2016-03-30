@@ -89,7 +89,7 @@ int inserePrioridadeFila(pFila fp, void *novo, int (*callback)(void *dados1, voi
 	return SUCESSO;
 }
 
-int insere(pFila fp, void *novo){
+int insereFila(pFila fp, void *novo){
 	pNo *aux, temp1;
 	if(fp->frente==NULL){ //Fila vazia
 		if((fp->frente = (pNo) malloc(sizeof(No)))==NULL) return FRACASSO;
